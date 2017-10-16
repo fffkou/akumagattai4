@@ -6,38 +6,24 @@ import os
 種族オブジェクト
 
 name: 種族名
-
 stuffs: 合体に必要な素材
-集合のリスト形式なので、
-片方のみ or 両方の素材に対してマッチング検索がおこなえます。
 """
 class Category:
 	def __init__(self, name, stuffs):
 		self.name = name
-		self.stuffs = self.convert_stuffs(stuffs)
+		self.stuffs = stuffs
 
 	"""
 	指定素材と一致する場合、組み合わせを返す
 	"""
-	def match_stuff(self, search):
+	def match_stuff(self, target):
 		match_stuffs = []
+		if isinstance(target, str):
+			target = [target]
 		for stuff in self.stuffs:
-			if set(search) <= stuff:
+			if set(target) <= set(stuff):
 				match_stuffs.append(stuff)
 		return match_stuffs
-
-	"""
-	素材リストの組み合わせを集合に変換
-	>>> [['a', 'b'], ['c', 'd'], ['a', 'e']]
-	[{'a', 'b'}, {'c', 'd'}, {'a', 'e'}]
-	"""
-	def convert_stuffs(self, stuffs):
-		stuffs_set = []
-		if stuffs:
-			for stuff in stuffs:
-				stuffs_set.append(set(stuff))
-		return stuffs_set
-
 
 
 """
