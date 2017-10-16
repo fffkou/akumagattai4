@@ -73,6 +73,17 @@ class Categories:
 		with open('data/category.json', mode='w', encoding='utf-8') as f:
 			json.dump(categories_list, f, ensure_ascii=False, indent="\t")
 
+	"""
+	合体素材情報登録
+	"""
+	def add_stuffs(name, stuffs):
+		categories = load_categories()
+		target_category = categories.get_category(name)
+		if target_category:
+			target_category.stuffs.append(stuffs)
+			categories.update()
+
+
 """
 種族情報を読み込み
 """
