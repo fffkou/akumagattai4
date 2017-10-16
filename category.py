@@ -57,6 +57,21 @@ class Categories:
 				match_categories[category.name] = category.match_stuff(stuffs)
 		return match_categories
 
+	"""
+	種族情報更新
+	"""
+	def update(self):
+		categories_list = []
+		# カテゴリーオブジェクトをjsonに変換できる形式に変換
+		for category in self.categories:
+			category_dict = {}
+			category_dict['name'] = category.name
+			category_dict['stuffs'] = []
+			for stuff in category.stuffs:
+				category_dict['stuffs'].append(stuff)
+			categories_list.append(category_dict)
+		with open('data/category.json', mode='w', encoding='utf-8') as f:
+			json.dump(categories_list, f, ensure_ascii=False, indent="\t")
 
 """
 種族情報を読み込み
