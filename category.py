@@ -50,7 +50,7 @@ class Categories:
 	>>> ['a', 'b']
 	{category1: [{'a', 'b'}]}
 	"""
-	def search_by_stuff(self, *stuffs):
+	def search_by_stuff(self, stuffs):
 		match_categories = {}
 		for category in self.categories:
 			if category.match_stuff(stuffs):
