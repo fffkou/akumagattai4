@@ -1,4 +1,5 @@
 from category import Category, Categories, load_categories
+from fusion import same_fusion
 import argparse
 
 
@@ -8,7 +9,12 @@ import argparse
 def union(args):
     categories = load_categories()
     pic_category = args.categories
-    result = categories.search_by_stuff(pic_category)
+    # 同種の場合精霊合体
+    if len(pic_category) == 1:
+        result = same_fusion(pic_category[0])
+    # 通常合体
+    else:
+        result = categories.search_by_stuff(pic_category)        
     if result:
         print(result)
     else:
@@ -45,7 +51,7 @@ def main():
     subparser = parser.add_subparsers()
 
     union_parser = subparser.add_parser('union', help='2身合体')
-    union_parser.add_argument('categories', nargs=2, help='種族')
+    union_parser.add_argument('categories', nargs='+', help='種族')
     union_parser.set_defaults(func=union)
 
     need_parser = subparser.add_parser('need', help='合体に必要な素材を検索します')
