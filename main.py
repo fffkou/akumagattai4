@@ -28,6 +28,18 @@ def need(args):
         print('合体候補が見つかりませんでした')
 
 
+"""
+素材を追加
+"""
+def add_stuff(args):
+    categories = load_categories()
+    result = categories.add_stuffs(args.name, args.stuffs)
+    if result:
+        print('追加しました')
+    else:
+        print('エラー: 追加できませんでした')
+
+
 def main():
     parser = argparse.ArgumentParser(description='合体検索')
     subparser = parser.add_subparsers()
@@ -39,6 +51,11 @@ def main():
     need_parser = subparser.add_parser('need', help='合体に必要な素材を検索します')
     need_parser.add_argument('target', type=str, help='作成したい種族')
     need_parser.set_defaults(func=need)
+
+    add_stuff_parser = subparser.add_parser('add_stuff', help='種族情報を追加')
+    add_stuff_parser.add_argument('name', type=str, help='素材を追加する種族')
+    add_stuff_parser.add_argument('stuffs', nargs=2, help='追加する種族')
+    add_stuff_parser.set_defaults(func=add_stuff)
 
     args = parser.parse_args()
     args.func(args)
