@@ -16,9 +16,16 @@ def union(args):
 
 
 """
+必要な素材を検索
 """
-def pos(args):
-    pass
+def need(args):
+    categories = load_categories()
+    category = categories.get_category(args.target)
+    if category.stuffs:
+        for stuff in category.stuffs:
+            print("{} × {}".format(stuff[0], stuff[1]))
+    else:
+        print('合体候補が見つかりませんでした')
 
 
 def main():
@@ -29,9 +36,9 @@ def main():
     union_parser.add_argument('categories', nargs=2, help='種族')
     union_parser.set_defaults(func=union)
 
-    possible_parser = subparser.add_parser('pos', help='合体可能な種族を検索します')
-    possible_parser.add_argument('category', type=str, help='対象の種族')
-    possible_parser.set_defaults(func=pos)
+    need_parser = subparser.add_parser('need', help='合体に必要な素材を検索します')
+    need_parser.add_argument('target', type=str, help='作成したい種族')
+    need_parser.set_defaults(func=need)
 
     args = parser.parse_args()
     args.func(args)
