@@ -23,7 +23,10 @@ class Category:
         for stuff in self.stuffs:
             if set(target) <= set(stuff):
                 match_stuffs.append(stuff)
-        return match_stuffs
+        if match_stuffs:
+            return match_stuffs
+        else:
+            return False
 
 
 """
@@ -80,8 +83,12 @@ class Categories:
         categories = load_categories()
         target_category = categories.get_category(name)
         if target_category:
-            target_category.stuffs.append(stuffs)
-            categories.update()
+            # 重複している場合は、追加処理をスキップ
+            if not target_category.match_stuff(stuffs):
+                target_category.stuffs.append(stuffs)
+                categories.update()
+                return True
+        return False
 
 
 """
