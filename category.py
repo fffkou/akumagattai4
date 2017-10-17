@@ -9,7 +9,8 @@ name: 種族名
 stuffs: 合体に必要な素材
 """
 class Category:
-    def __init__(self, name, stuffs):
+    def __init__(self, ID, name, stuffs):
+        self.ID = ID
         self.name = name
         self.stuffs = stuffs
 
@@ -68,6 +69,7 @@ class Categories:
         # カテゴリーオブジェクトをjsonに変換できる形式に変換
         for category in self.categories:
             category_dict = {}
+            category_dict['ID'] = category.ID
             category_dict['name'] = category.name
             category_dict['stuffs'] = []
             for stuff in category.stuffs:
@@ -100,6 +102,8 @@ def load_categories():
         # Json形式を読み込み
         json_data = json.load(f)
         for line in json_data:
+            # ID
+            ID = line['ID']
             # 種族名
             name = line['name']
             # 必要素材
@@ -107,7 +111,7 @@ def load_categories():
             if line.setdefault('stuffs'):
                 stuffs = line['stuffs']
 
-            category = Category(name, stuffs)
+            category = Category(ID, name, stuffs)
             category_list.append(category)
     categories = Categories(category_list)
     return categories
