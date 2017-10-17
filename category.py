@@ -76,7 +76,7 @@ class Categories:
     """
     合体素材情報登録
     """
-    def add_stuffs(name, stuffs):
+    def add_stuffs(self, name, stuffs):
         categories = load_categories()
         target_category = categories.get_category(name)
         if target_category:
