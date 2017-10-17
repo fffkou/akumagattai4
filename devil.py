@@ -36,14 +36,13 @@ class Devils:
     def add_devil(self, name, category_name, level):
         devil_data = {}
         categories = load_categories()
-        for category in categories.categories:
-            if category.name == category_name:
-                category_number = str(categories.categories.index(category))
+        category = categories.get_category(category_name)
+        category_id = category.ID
         devil_data['name'] = name
         devil_data['level'] = level
-        if not self.devils.setdefault(category_number):
-            self.devils[category_number] = []
-        self.devils[category_number].append(devil_data)
+        if not self.devils.setdefault(category_id):
+            self.devils[category_id] = []
+        self.devils[category_id].append(devil_data)
         self.update()
 
 
