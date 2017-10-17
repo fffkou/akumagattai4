@@ -4,7 +4,7 @@ from category import load_categories
 """
 同種合体で作成される精霊を検索
 """
-def spirit_fusion(name):
+def same_fusion(name):
     categories = load_categories()
     target = categories.get_category(name)
     spirit_dict = {
@@ -25,7 +25,7 @@ def spirit_fusion(name):
 
 
 def main():
-    result = spirit_fusion('フード')
+    result = same_fusion('フード')
     print(result)
 
 
