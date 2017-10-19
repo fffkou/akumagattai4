@@ -71,7 +71,7 @@ def load_devils():
                 for data in data_list:
                     name = data['name']
                     level = data['level']
-                    devil = Devil(name, cat_id, level)
+                    devil = Devil(name, int(cat_id), level)
                     deviles_list.append(devil)
         devils = Devils(deviles_list)
         return devils
