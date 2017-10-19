@@ -23,6 +23,17 @@ class Devils:
         self.devils = devils
 
     """
+    悪魔名検索
+    """
+    def get_devil(self, name):
+        for devil in self.devils:
+            if devil.name == name:
+                return devil
+        return False
+
+
+    """
+    悪魔情報更新
     """
     def update(self):
         devils_list = self.devils
