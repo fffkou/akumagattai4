@@ -45,6 +45,15 @@ class Categories:
             if category.name == name:
                 return category
         return False
+    
+    """
+    種族IDからオブジェクトを返す
+    """
+    def search_by_id(self, id):
+        for category in self.categories:
+            if category.ID == id:
+                return category
+        return False
 
     """
     指定素材にマッチする種族と素材リストを返す
