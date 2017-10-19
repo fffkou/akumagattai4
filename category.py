@@ -76,7 +76,7 @@ class Categories:
                 category_dict['stuffs'].append(stuff)
             categories_list.append(category_dict)
         with open('data/category.json', mode='w', encoding='utf-8') as f:
-            json.dump(categories_list, f, ensure_ascii=False, indent="\t")
+            json.dump(categories_list, f, ensure_ascii=False, indent=4)
 
     """
     合体素材情報登録
