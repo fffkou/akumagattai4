@@ -30,6 +30,16 @@ class Spirits:
                 return spirit
 
     """
+    種族名から作成される精霊を取得
+    """
+    
+    def search_by_stuff(self, category_name):
+        for spirit in self.spirits:
+            if category_name in set(spirit.stuffs):
+                return spirit
+        return False
+
+    """
     種族名からランクアップする精霊を取得
     """
 
