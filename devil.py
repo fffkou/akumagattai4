@@ -54,9 +54,16 @@ class Devils:
 def load_devils():
     with open('data/devil.json', encoding='utf-8') as f:
         json_data = json.load(f)
-        devils = Devils(json_data)
+        deviles_list = []
+        for cat_id, data_list in json_data.items():
+            if data_list:
+                for data in data_list:
+                    name = data['name']
+                    level = data['level']
+                    devil = Devil(name, cat_id, level)
+                    deviles_list.append(devil)
+        devils = Devils(deviles_list)
         return devils
-            
 
 
 def main():
