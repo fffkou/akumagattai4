@@ -1,5 +1,6 @@
 from category import load_categories
 from spirit import load_spirits, Spirits, Spirit
+from devil import load_devils, Devils, Devil
 import json
 
 
@@ -17,16 +18,30 @@ def same_fusion(name):
     return False
 
 
-def main():
-    spirits = load_spirits()
+"""
+2身合体
+"""
+
+
+def normal_fusion(devil_name1, devil_name2):
+    devils = load_devils()
+    devil1 = devils.get_devil(devil_name1)
+    devil2 = devils.get_devil(devil_name2)
     categories = load_categories()
-    result = spirits.get_up_by('魔獣')
-    for category in categories.categories:
-        up_list = spirits.get_up_by(category.name)
-        if up_list:
-            print("{:<4}{}".format(category.name, up_list))
+    if devil1 and devil2:
+        cat1 = categories.search_by_id(devil1.category)
+        cat2 = categories.search_by_id(devil2.category)
+        if cat1.name == cat2.name:
+            result = same_fusion(cat1.name)
+        else:
+            pattern = [cat1.name, cat2.name]
+            result = categories.search_by_stuff(pattern)
+        return result
+    return False
 
 
+def main():
+    pass
 
 
 if __name__ == '__main__':
