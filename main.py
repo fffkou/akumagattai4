@@ -1,5 +1,6 @@
 from category import Category, Categories, load_categories
 from fusion import same_fusion
+from devil import load_devils, Devils, Devil
 import argparse
 
 
@@ -46,6 +47,17 @@ def add_stuff(args):
         print('エラー: 追加できませんでした')
 
 
+"""
+悪魔の追加
+"""
+
+
+def add_devil(args):
+    devils = load_devils()
+    result = devils.add_devil(args.name, args.category, args.level)
+    print(result)
+
+
 def main():
     parser = argparse.ArgumentParser(description='合体検索')
     subparser = parser.add_subparsers()
@@ -62,6 +74,12 @@ def main():
     add_stuff_parser.add_argument('name', type=str, help='素材を追加する種族')
     add_stuff_parser.add_argument('stuffs', nargs=2, help='追加する種族')
     add_stuff_parser.set_defaults(func=add_stuff)
+
+    add_devil_parser = subparser.add_parser('add_devil', help='悪魔の追加')
+    add_devil_parser.add_argument('name', type=str, help='悪魔の名前')
+    add_devil_parser.add_argument('category', type=str, help='種族名')
+    add_devil_parser.add_argument('level', type=str, help='初期レベル')
+    add_devil_parser.set_defaults(func=add_devil)
 
     args = parser.parse_args()
     args.func(args)
