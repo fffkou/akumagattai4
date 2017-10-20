@@ -39,13 +39,20 @@ class Devils:
         devil_dict = {}
         categories = load_categories()
         for devil in self.devils:
-            category_id = str(devil.category)
+            category_id = devil.category
             if category_id not in devil_dict.keys():
                 devil_dict[category_id] = []
             devil_data = dict(name=devil.name, level=int(devil.level))
             devil_dict[category_id].append(devil_data)
+            devil_dict[category_id] = sorted(devil_dict[category_id], key=lambda x:x['level']) # レベル順に並び替え
+
+        # 保存前にカテゴリーID順に並び替え
+        sort_key = sorted(devil_dict)
+        sort_dict = {}
+        for key in sort_key:
+            sort_dict[key] = devil_dict[key]
         with open('data/devil.json', mode='w', encoding='utf-8') as f:
-            json.dump(devil_dict, f, ensure_ascii=False, indent=4)
+            json.dump(sort_dict, f, ensure_ascii=False, indent=4)
 
 
     """
