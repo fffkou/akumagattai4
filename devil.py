@@ -36,24 +36,27 @@ class Devils:
     悪魔情報更新
     """
     def update(self):
-        devils_list = self.devils
+        devil_dict = {}
+        categories = load_categories()
+        for devil in self.devils:
+            category_id = str(devil.category)
+            if category_id not in devil_dict.keys():
+                devil_dict[category_id] = []
+            devil_data = dict(name=devil.name, level=int(devil.level))
+            devil_dict[category_id].append(devil_data)
         with open('data/devil.json', mode='w', encoding='utf-8') as f:
-            json.dump(devils_list, f, ensure_ascii=False, indent=4)
+            json.dump(devil_dict, f, ensure_ascii=False, indent=4)
 
 
     """
     悪魔情報新規追加
     """
     def add_devil(self, name, category_name, level):
-        devil_data = {}
         categories = load_categories()
         category = categories.get_category(category_name)
         category_id = category.ID
-        devil_data['name'] = name
-        devil_data['level'] = level
-        if not self.devils.setdefault(category_id):
-            self.devils[category_id] = []
-        self.devils[category_id].append(devil_data)
+        devil = Devil(name, category_id, level)
+        self.devils.append(devil)
         self.update()
 
 
