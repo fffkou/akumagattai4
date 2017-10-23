@@ -7,10 +7,11 @@ import json
 悪魔情報クラス
 """
 class Devil:
-    def __init__(self, name, category, level):
+    def __init__(self, name, category, level, special=False):
         self.name = name
         self.category = category
         self.level = level
+        self.special = special
 
 
 """
@@ -42,7 +43,7 @@ class Devils:
             category_id = devil.category
             if category_id not in devil_dict.keys():
                 devil_dict[category_id] = []
-            devil_data = dict(name=devil.name, level=int(devil.level))
+            devil_data = dict(name=devil.name, level=int(devil.level), special=devil.special)
             devil_dict[category_id].append(devil_data)
             devil_dict[category_id] = sorted(devil_dict[category_id], key=lambda x:x['level']) # レベル順に並び替え
 
@@ -53,7 +54,6 @@ class Devils:
             sort_dict[key] = devil_dict[key]
         with open('data/devil.json', mode='w', encoding='utf-8') as f:
             json.dump(sort_dict, f, ensure_ascii=False, indent=4)
-
 
     """
     悪魔情報新規追加
@@ -70,6 +70,16 @@ class Devils:
         else:
             return False
 
+    """
+    特殊合体有無
+    """
+    def add_special(self, name, *stuffs):
+        devil = self.get_devil(name)
+        if devil:
+            devil.special = list(stuffs)
+            self.update()
+            return devil
+
 
 """
 悪魔情報読み込み関数
@@ -85,7 +95,8 @@ def load_devils():
                 for data in data_list:
                     name = data['name']
                     level = data['level']
-                    devil = Devil(name, int(cat_id), level)
+                    special = data['special']
+                    devil = Devil(name, int(cat_id), level, special)
                     deviles_list.append(devil)
         devils = Devils(deviles_list)
         return devils
