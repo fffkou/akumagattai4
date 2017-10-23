@@ -2,493 +2,615 @@
     "1": [
         {
             "name": "ライラ",
-            "level": 54
+            "level": 54,
+            "special": false
         },
         {
             "name": "ヴィクター",
-            "level": 61
+            "level": 61,
+            "special": false
         },
         {
             "name": "イスラフィール",
-            "level": 68
+            "level": 68,
+            "special": false
         },
         {
             "name": "アズラエル",
-            "level": 77
+            "level": 77,
+            "special": false
         },
         {
             "name": "カズフェル",
-            "level": 82
+            "level": 82,
+            "special": false
         },
         {
             "name": "スラオシャ",
-            "level": 86
+            "level": 86,
+            "special": false
         },
         {
             "name": "マンセマット",
-            "level": 90
+            "level": 90,
+            "special": false
         }
     ],
     "2": [
         {
             "name": "フォルトゥナ",
-            "level": 11
+            "level": 11,
+            "special": false
         },
         {
             "name": "ハトホル",
-            "level": 18
+            "level": 18,
+            "special": false
         },
         {
             "name": "パールヴァティ",
-            "level": 25
+            "level": 25,
+            "special": false
         },
         {
             "name": "プリジット",
-            "level": 33
+            "level": 33,
+            "special": false
         },
         {
             "name": "スカアハ",
-            "level": 39
+            "level": 39,
+            "special": false
         },
         {
             "name": "イシュタル",
-            "level": 44
+            "level": 44,
+            "special": false
         },
         {
             "name": "パラスアテナ",
-            "level": 51
+            "level": 51,
+            "special": false
         },
         {
             "name": "トラソルテオトル",
-            "level": 57
+            "level": 57,
+            "special": false
         },
         {
             "name": "アナト",
-            "level": 63
+            "level": 63,
+            "special": false
         },
         {
             "name": "ノルン",
-            "level": 69
+            "level": 69,
+            "special": false
         },
         {
             "name": "ラクシュミ",
-            "level": 77
+            "level": 77,
+            "special": false
         },
         {
             "name": "イザナミ",
-            "level": 82
+            "level": 82,
+            "special": false
         }
     ],
     "3": [
         {
             "name": "ハンサ",
-            "level": 10
+            "level": 10,
+            "special": false
         },
         {
             "name": "スパルナ",
-            "level": 15
+            "level": 15,
+            "special": false
         },
         {
             "name": "フェニックス",
-            "level": 24
+            "level": 24,
+            "special": false
         },
         {
             "name": "ヴィゾフニル",
-            "level": 34
+            "level": 34,
+            "special": false
         },
         {
             "name": "サンダーバード",
-            "level": 42
+            "level": 42,
+            "special": false
         },
         {
             "name": "ヤタガラス",
-            "level": 52
+            "level": 52,
+            "special": false
         },
         {
             "name": "スザク",
-            "level": 63
+            "level": 63,
+            "special": false
         },
         {
             "name": "ガルーダ",
-            "level": 72
+            "level": 72,
+            "special": false
         }
     ],
     "4": [
         {
             "name": "ダフネ",
-            "level": 16
+            "level": 16,
+            "special": false
         },
         {
             "name": "ナルキッソス",
-            "level": 29
+            "level": 29,
+            "special": false
         },
         {
             "name": "マヤウェル",
-            "level": 34
+            "level": 34,
+            "special": false
         },
         {
             "name": "ククイチ",
-            "level": 44
+            "level": 44,
+            "special": false
         },
         {
             "name": "ハオマ",
-            "level": 54
+            "level": 54,
+            "special": false
         },
         {
             "name": "イグドラジル",
-            "level": 65
+            "level": 65,
+            "special": false
         }
     ],
     "5": [
         {
             "name": "エンジェル",
-            "level": 10
+            "level": 10,
+            "special": false
         },
         {
             "name": "アークエンジェル",
-            "level": 18
+            "level": 18,
+            "special": false
         },
         {
             "name": "プリンシパリティ",
-            "level": 26
+            "level": 26,
+            "special": false
         },
         {
             "name": "パワー",
-            "level": 33
+            "level": 33,
+            "special": false
         },
         {
             "name": "ヴァーチャー",
-            "level": 41
+            "level": 41,
+            "special": false
         },
         {
             "name": "ドミニオン",
-            "level": 51
+            "level": 51,
+            "special": false
         },
         {
             "name": "ソロネ",
-            "level": 62
+            "level": 62,
+            "special": false
         },
         {
             "name": "ケルプ",
-            "level": 71
+            "level": 71,
+            "special": false
         },
         {
             "name": "エンジェル(白)",
-            "level": 82
+            "level": 82,
+            "special": false
         }
     ],
     "12": [
         {
             "name": "トート",
-            "level": 30
+            "level": 30,
+            "special": false
         },
         {
             "name": "インティ",
-            "level": 34
+            "level": 34,
+            "special": false
         },
         {
             "name": "プロメテウス",
-            "level": 40
+            "level": 40,
+            "special": false
         },
         {
             "name": "ナントセイクン",
-            "level": 48
+            "level": 48,
+            "special": false
         },
         {
             "name": "オシリス",
-            "level": 53
+            "level": 53,
+            "special": false
         },
         {
             "name": "オメテオトル",
-            "level": 59
+            "level": 59,
+            "special": false
         },
         {
             "name": "マハーマユリ",
-            "level": 67
+            "level": 67,
+            "special": false
         },
         {
             "name": "ハチマン",
-            "level": 75
+            "level": 75,
+            "special": false
         },
         {
             "name": "バアル",
-            "level": 79
+            "level": 79,
+            "special": false
         },
         {
             "name": "アプスー",
-            "level": 82
+            "level": 82,
+            "special": false
         },
         {
             "name": "ミロク菩薩",
-            "level": 83
+            "level": 83,
+            "special": false
         },
         {
             "name": "オーディン",
-            "level": 85
+            "level": 85,
+            "special": [
+                "オセ",
+                "ティターン",
+                "トート",
+                "トール"
+            ]
         },
         {
             "name": "クリシュナ",
-            "level": 87
+            "level": 87,
+            "special": false
         }
     ],
     "16": [
         {
             "name": "ゴブリン",
-            "level": 3
+            "level": 3,
+            "special": false
         },
         {
             "name": "ナジャ",
-            "level": 6
+            "level": 6,
+            "special": false
         },
         {
             "name": "ピクシー",
-            "level": 9
+            "level": 9,
+            "special": false
         },
         {
             "name": "ナパイア",
-            "level": 12
+            "level": 12,
+            "special": false
         },
         {
             "name": "スプリガン",
-            "level": 14
+            "level": 14,
+            "special": false
         },
         {
             "name": "ジャックフロスト",
-            "level": 20
+            "level": 20,
+            "special": false
         },
         {
             "name": "ジャックランタン",
-            "level": 25
+            "level": 25,
+            "special": false
         },
         {
             "name": "ハイピクシー",
-            "level": 29
+            "level": 29,
+            "special": false
         },
         {
             "name": "ケルピー",
-            "level": 31
+            "level": 31,
+            "special": false
         },
         {
             "name": "セタンタ",
-            "level": 35
+            "level": 35,
+            "special": false
         },
         {
             "name": "シルキー",
-            "level": 44
+            "level": 44,
+            "special": false
         },
         {
             "name": "ヴィヴィアン",
-            "level": 52
+            "level": 52,
+            "special": false
         },
         {
             "name": "ローレライ",
-            "level": 58
+            "level": 58,
+            "special": false
         },
         {
             "name": "オベロン",
-            "level": 64
+            "level": 64,
+            "special": false
         },
         {
             "name": "ティターニア",
-            "level": 70
+            "level": 70,
+            "special": false
         }
     ],
     "23": [
         {
             "name": "モスマン",
-            "level": 11
+            "level": 11,
+            "special": false
         },
         {
             "name": "ウブ",
-            "level": 21
+            "level": 21,
+            "special": false
         },
         {
             "name": "ミルメコレオ",
-            "level": 29
+            "level": 29,
+            "special": false
         },
         {
             "name": "オキクムシ",
-            "level": 34
+            "level": 34,
+            "special": false
         },
         {
             "name": "アルケニー",
-            "level": 44
+            "level": 44,
+            "special": false
         }
     ],
     "24": [
         {
             "name": "アレス",
-            "level": 32
+            "level": 32,
+            "special": false
         },
         {
             "name": "トナティウ",
-            "level": 37
+            "level": 37,
+            "special": false
         },
         {
             "name": "アスラ",
-            "level": 43
+            "level": 43,
+            "special": false
         },
         {
             "name": "チェルノボグ",
-            "level": 50
+            "level": 50,
+            "special": false
         },
         {
             "name": "セイテンタイセイ",
-            "level": 57
+            "level": 57,
+            "special": false
         },
         {
             "name": "ホクトセイクン",
-            "level": 66
+            "level": 66,
+            "special": false
         },
         {
             "name": "カルティケーヤ",
-            "level": 78
+            "level": 78,
+            "special": false
         },
         {
             "name": "スサノオ",
-            "level": 84
+            "level": 84,
+            "special": false
         },
         {
             "name": "シヴァ",
-            "level": 95
+            "level": 95,
+            "special": false
         }
     ],
     "25": [
         {
             "name": "ペレ",
-            "level": 7
+            "level": 7,
+            "special": false
         },
         {
             "name": "ズェラロンズ",
-            "level": 19
+            "level": 19,
+            "special": false
         },
         {
             "name": "セドナ",
-            "level": 27
+            "level": 27,
+            "special": false
         },
         {
             "name": "ハリティー",
-            "level": 36
+            "level": 36,
+            "special": false
         },
         {
             "name": "ダイアナ",
-            "level": 41
+            "level": 41,
+            "special": false
         },
         {
             "name": "アシュラト",
-            "level": 51
+            "level": 51,
+            "special": false
         },
         {
             "name": "イシス",
-            "level": 59
+            "level": 59,
+            "special": false
         },
         {
             "name": "ブラックマリア",
-            "level": 66
+            "level": 66,
+            "special": false
         },
         {
             "name": "スカディ",
-            "level": 73
+            "level": 73,
+            "special": false
         },
         {
             "name": "セイオウボ",
-            "level": 79
+            "level": 79,
+            "special": false
         },
         {
             "name": "イナンナ",
-            "level": 91
+            "level": 91,
+            "special": false
         }
     ],
     "28": [
         {
             "name": "デカラビア",
-            "level": 5
+            "level": 5,
+            "special": false
         },
         {
             "name": "メルコム",
-            "level": 13
+            "level": 13,
+            "special": false
         },
         {
             "name": "ビフロンス",
-            "level": 20
+            "level": 20,
+            "special": false
         },
         {
             "name": "ハルパス",
-            "level": 24
+            "level": 24,
+            "special": false
         },
         {
             "name": "オセ",
-            "level": 32
+            "level": 32,
+            "special": false
         },
         {
             "name": "オリアス",
-            "level": 38
+            "level": 38,
+            "special": false
         },
         {
             "name": "ネビロス",
-            "level": 46
+            "level": 46,
+            "special": false
         },
         {
             "name": "ダンタリアン",
-            "level": 53
+            "level": 53,
+            "special": false
         },
         {
             "name": "ゴモリー",
-            "level": 58
+            "level": 58,
+            "special": false
         },
         {
             "name": "ムールムール",
-            "level": 63
+            "level": 63,
+            "special": false
         },
         {
             "name": "アドラメレク",
-            "level": 68
+            "level": 68,
+            "special": false
         },
         {
             "name": "バルバトス",
-            "level": 69
+            "level": 69,
+            "special": false
         },
         {
             "name": "シャックス",
-            "level": 74
+            "level": 74,
+            "special": false
         },
         {
             "name": "ボティス",
-            "level": 83
+            "level": 83,
+            "special": false
         },
         {
             "name": "サマエル",
-            "level": 90
+            "level": 90,
+            "special": false
         }
     ],
     "44": [
         {
             "name": "タケミナカタ",
-            "level": 21
+            "level": 21,
+            "special": false
         },
         {
             "name": "オオクニヌシ",
-            "level": 30
+            "level": 30,
+            "special": false
         },
         {
             "name": "スクナヒコナ",
-            "level": 34
+            "level": 34,
+            "special": false
         },
         {
             "name": "クシナダヒメ",
-            "level": 40
+            "level": 40,
+            "special": false
         },
         {
             "name": "ヒトコトヌシ",
-            "level": 49
+            "level": 49,
+            "special": false
         },
         {
             "name": "アラハバキ",
-            "level": 57
+            "level": 57,
+            "special": false
         },
         {
             "name": "オオミツヌ",
-            "level": 65
+            "level": 65,
+            "special": false
         }
     ]
 }
