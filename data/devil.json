@@ -295,6 +295,63 @@
             "special": false
         }
     ],
+    "15": [
+        {
+            "name": "タム・リン",
+            "level": 13,
+            "special": false
+        },
+        {
+            "name": "ナタタイシ",
+            "level": 23,
+            "special": false
+        },
+        {
+            "name": "バルドル",
+            "level": 28,
+            "special": false
+        },
+        {
+            "name": "トラロック",
+            "level": 39,
+            "special": false
+        },
+        {
+            "name": "フロストエース",
+            "level": 42,
+            "special": false
+        },
+        {
+            "name": "クラマテング",
+            "level": 43,
+            "special": false
+        },
+        {
+            "name": "クー・フーリン",
+            "level": 50,
+            "special": false
+        },
+        {
+            "name": "クルースニク",
+            "level": 56,
+            "special": false
+        },
+        {
+            "name": "ヤリーロ",
+            "level": 61,
+            "special": false
+        },
+        {
+            "name": "ハヌマーン",
+            "level": 66,
+            "special": false
+        },
+        {
+            "name": "ヘイムダル",
+            "level": 73,
+            "special": false
+        }
+    ],
     "16": [
         {
             "name": "ゴブリン",
