@@ -62,9 +62,13 @@ class Devils:
         categories = load_categories()
         category = categories.get_category(category_name)
         category_id = category.ID
-        devil = Devil(name, category_id, level)
-        self.devils.append(devil)
-        self.update()
+        if not self.get_devil(name):
+            devil = Devil(name, category_id, level)
+            self.devils.append(devil)
+            self.update()
+            return True
+        else:
+            return False
 
 
 """
@@ -89,7 +93,6 @@ def load_devils():
 
 def main():
     devils = load_devils()
-    devils.add_devil('ハトホル', '女神', 18)
 
 
 if __name__ == '__main__':

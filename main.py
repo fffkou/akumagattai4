@@ -55,7 +55,10 @@ def add_stuff(args):
 def add_devil(args):
     devils = load_devils()
     result = devils.add_devil(args.name, args.category, args.level)
-    print(result)
+    if result:
+        print('登録しました')
+    else:
+        print('登録失敗')
 
 
 def main():
