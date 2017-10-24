@@ -94,6 +94,10 @@ class Categories:
         categories = load_categories()
         target_category = categories.get_category(name)
         if target_category:
+            for stuff in stuffs:
+                # 存在しない素材名の場合は処理をストップ
+                if not self.get_category(stuff):
+                    return False
             # 重複している場合は、追加処理をスキップ
             if not target_category.match_stuff(stuffs):
                 target_category.stuffs.append(stuffs)
